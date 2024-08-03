@@ -1,0 +1,163 @@
+/* styles.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul .sign-up {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.search-section input {
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.main-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.main-section h2 {
+  font-size: 20px;
+  color: #888;
+}
+
+.main-section h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.main-section p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.main-section .buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+.image-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.image-card {
+  text-align: center;
+  flex: 1 1 calc(16.66% - 40px); /* Adjusting for spacing and flexibility */
+  margin: 10px;
+}
+
+.image-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.image-card .caption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .image-card {
+    flex: 1 1 calc(33.33% - 40px); /* Three items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-card {
+    flex: 1 1 calc(50% - 40px); /* Two items per row */
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+  
+  .logo {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-card {
+    flex: 1 1 100%; /* Single item per row */
+  }
+  
+  nav ul {
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .navbar {
+    align-items: center;
+  }
+}
+
